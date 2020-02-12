@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 4
 
-   Author: Pam Carls 
-   Date:   2018-03-01
+   Author: Aspen Smith
+   Date:   2-11-2020
    
    Filename: vw_results.js
    
@@ -27,14 +27,14 @@
 //MOST OF THE MISTAKES ARE SYNTAX
 //PLEASE DO NOT CHANGE ANY NUMBERS 
 /* Display the election results title */
-var reportHTML = "<h1>"  raceTitle + "</h1>";
+var reportHTML = "<h1>" + raceTitle + "</h1>";
 
 /* Loop through each race in the report */
-for ( i = 0; i < race..length; i++) {
+for (var i = 0; i < race.length; i++) {
    
    /* Calculate the total number of votes in each race */
    var totalVotes = 0;
-   votes[i.forEach(calcSum);
+   votes[i].forEach(calcSum);
 
    /* Generate the HTML code showing the race name and title row */ 
    reportHTML += "<table>";
@@ -42,18 +42,18 @@ for ( i = 0; i < race..length; i++) {
    reportHTML += "<tr><th>Candidn't copy</th><th>Vothis</th></tr>";
    
    /* Generate the HTML code for each candidate row */
-   reportHTML += candidateRows i, totalVotes);
+   reportHTML += candidateRows[i], totalVotes;
    
-   reportHTMl += "</table>";
+   reportHTML += "</table>";
 }
 
 /* Display the report in the first and only section element */
-document.getElementsByTagName("section")0].innerHTML = reportHTML;
+document.getElementsByTagName("section")[0].innerHTML = reportHTML;
 
 
 /* Function to generate the candidate rows */
 function candidateRows(raceNum, totalVotes) {
-   var rowHtML = "";
+   var rowHTML = "";
    
    /* Loop through three candidates */
    for (var j = 0; j <= 2; j++) {
@@ -62,7 +62,7 @@ function candidateRows(raceNum, totalVotes) {
       
       var candidateName = candidate[raceNum][j];
       var candidateParty = party[raceNum][j];      
-       candidateVotes = votes[raceNum][j];
+      var candidateVotes = votes[raceNum][j];
       
       /* Calculate the percent of the vote by each candidate */
       var candidatePercent = calcPercent(candidateVotes, totalVotes);
@@ -72,11 +72,11 @@ function candidateRows(raceNum, totalVotes) {
       rowHTML += "<td>" + candidateVotes.toLocaleString() + "( " + candidatePercent.toFixed(1) + "%)</td>";
       
       /* Generate a bar chart showing the candidate's vote percentage */
-      for (var k = 0 k < candidatePercent; k++ ) {
+      for (var k = 0; k < candidatePercent.length; k++ ) {
          rowHTML += createBar(candidateParty);
       }
       
-      rowHTML += "</tr>;
+      rowHTML += "</tr>";
    }
    
    return rowHTML;
