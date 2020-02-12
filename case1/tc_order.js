@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 1
 
-   Author: Sarah Nodheim
-   Date:   2018-03-01
+   Author: Aspen Smith
+   Date:   2-11-2020
 
    Filename: tc_order.js  
 
